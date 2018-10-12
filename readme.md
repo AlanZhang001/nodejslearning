@@ -32,6 +32,10 @@ nodemon --inspect server/index.js
 },
 ```
 
+## 待搞明白的事情
+1. nodejs 的版本问题，稳定版和LTS是什么关系？
+2. node 的rpc是什么东西？
 
 ## 文章
+
 [浅析 NodeJs 的几种文件路径](https://github.com/imsobear/blog/issues/48)
