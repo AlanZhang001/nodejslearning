@@ -3,6 +3,7 @@
 ## 环境安装
 
 #### 1. 安装mysql数据库驱动
+
 ```shell
 npm install mysql --save-dev
 ```
@@ -11,7 +12,10 @@ npm install mysql --save-dev
 
 ###### windows
 
-下载地址:官网下载地址：https://dev.mysql.com/downloads/mysql/
+1. 下载地址:官网下载地址：https://dev.mysql.com/downloads/file/?id=479141 （5.7）
+2. 将mysql 加入环境变量 C:\Program Files\MySQL\MySQL Server 8.0\bin
+3. net start/stop MySQL80(服务名自己查：win+R，运行services.msc，找到mysql)
+4. mysql -u root -p
 
 ###### mac
 
@@ -35,7 +39,7 @@ mysql -u root -p -h localhost
 ```
 
 如果出现问题:
-```
+```shell
 1. ERROR! The server quit without updating PID file
 ```
 找了很久，没找出解决办法，卸载重装
@@ -48,6 +52,7 @@ sudo rm -rf /usr/local/var/mysql
 ```
 
 #### 一些要记的不常用命令
+
 ```shell
 # 显示表结构
 desc table_name;
