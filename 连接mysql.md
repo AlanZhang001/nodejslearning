@@ -46,3 +46,11 @@ brew uninstall mysql@5.7
 sudo rm -rf /usr/local/var/mysql
 # 重新执行上面的安装步骤
 ```
+
+#### 一些要记的不常用命令
+```shell
+# 显示表结构
+desc table_name;
+# 显示创建表的sql语句
+show create table table_name;
+```
