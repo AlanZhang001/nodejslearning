@@ -43,13 +43,10 @@ nodemon --inspect server/index.js
     + 因此，require的方式可以使用相对路径，其他情况,都需要把相对路径转换成绝对路径才能正确处理路径情况。
     + 
 
->从[这里](https://github.com/imsobear/blog/issues/48)总结的
-
->一句话总结就是：
-
->When using require, the path is relative to that source file (NOT root directory).
-
->When using fs, the path is relative to process.cwd() (NOT that source file).
+> 从[这里](https://github.com/imsobear/blog/issues/48)总结的
+> 一句话总结就是：
+> When using require, the path is relative to that source file (NOT root directory).
+> When using fs, the path is relative to process.cwd() (NOT that source file).
 
 ## 待搞明白的事情
 1. nodejs 的版本问题，稳定版和LTS是什么关系？
