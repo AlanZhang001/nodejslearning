@@ -5,11 +5,11 @@
 
 ## 工具技巧
 
-##### 1. 如何查看nodejs是否支持某个特性
+#### 1. 如何查看nodejs是否支持某个特性
 - 通过<https://node.green/>查看
 - 通过es-checker来检测[感觉并不太准确，node 10.3 ,居然检测出不支持]
 
-##### 2. nodejs 如何调试：
+#### 2. nodejs 如何调试：
 
 ```shell
 # 安装nodemon，全局或者本地安装
@@ -32,7 +32,7 @@ nodemon --inspect server/index.js
 },
 ```
 
-##### 3. __dirname, __filename, process.cwd()，./,../到底什么关系
+#### 3. __dirname, __filename, process.cwd()，./,../到底什么关系
 
 - `__dirname`:总是返回被执行的 js 所在文件夹的绝对路径
 - `__filename`: 总是返回被执行的 js 的绝对路径
