@@ -16,7 +16,7 @@
         + x为偶数的版本 都会成为一个LTS的版本
         + [下载链接](https://nodejs.org/download/release/)
     + Nightly:
-        + 如果有修改的时候，一天为单位发布版本，使用有风险。
+        + 如果有修改的时候，以天为单位发布版本，使用有风险。
         + [下载链接](https://nodejs.org/download/nightly/)
 
 >详细说明见[这里](https://github.com/nodejs/node#release-types)
