@@ -25,7 +25,7 @@
 
 #### 1. 如何查看nodejs是否支持某个特性
 - 通过<https://node.green/>查看
-- 通过es-checker来检测[感觉并不太准确，node 10.3 ,居然检测出不支持]
+- 通过es-checker来检测[感觉并不太准确]
 
 #### 2. nodejs 如何调试：
 
