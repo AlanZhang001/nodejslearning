@@ -51,6 +51,12 @@ nodemon --inspect server/index.js
 ## 待搞明白的事情
 1. nodejs 的版本问题，稳定版和LTS是什么关系？
 2. node 的rpc是什么东西？
+3. koa-session
+4. ioredis
+5. pm2 开机启动
+6. 搭建私有npm
+7. Joi进行输入输出验证： koa-context-validator
+8. koa-i18n
 
 ## 文章
 
