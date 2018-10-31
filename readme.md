@@ -57,6 +57,7 @@ nodemon --inspect server/index.js
 6. 搭建私有npm
 7. Joi进行输入输出验证： koa-context-validator
 8. koa-i18n
+9. https://github.com/nodejs/Release#release-schedule
 
 ## 文章
 
