@@ -3,7 +3,25 @@
 ## 学习资源
 <https://github.com/nswbmw/N-blog>
 
-## 工具技巧
+## Nodejs的版本问题
+
+关于版本问题，需要搞清楚这些点：
+
+版本号支持semver版本号规则（x.y.z）
+
+- nodejs的版本类型分为3个：
+    + Current:
+    + LTS:
+        + 长期支持的版本，注重安全和稳定
+        + x为偶数的版本 都会成为一个LTS的版本
+        + [下载链接](https://nodejs.org/download/release/)
+    + Nightly:
+        + 如果有修改的时候，一天为单位发布版本，使用有风险。
+        + [下载链接](https://nodejs.org/download/nightly/)
+
+>详细说明见[这里](https://github.com/nodejs/node#release-types)
+
+## 总结
 
 #### 1. 如何查看nodejs是否支持某个特性
 - 通过<https://node.green/>查看
