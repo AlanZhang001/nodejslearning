@@ -12,9 +12,10 @@
 - nodejs的版本类型分为3个：
     + Current:
         + 开发分支，每6个月（每年4月，10月）发布一个x版本
-        + 10月份发布的大版本会支持 8个月，4月份发布的版本会变成LTS版本
+        + 10月份发布的大版本会支持 8个月，4月份发布的版本会在10份会变成LTS版本
     + LTS:
-        + 长期支持的版本，注重安全和稳定
+        + 长期支持的版本，注重安全和稳定，长期支持也只是在一段时间内支持
+        + LTS版本会有一个18个月“长期支持”（bug fix，安全问题 fix, 文档更新和与未来新特性兼容问题的更新）的阶段，在之后，会有一个12个月的维护阶段（ 严重的bug fix，严重的安全问题 fix 或者文档更新）
         + 凡x为偶数的版本 都会成为一个LTS的版本
         + [下载链接](https://nodejs.org/download/release/)
     + Nightly:
@@ -77,7 +78,7 @@ nodemon --inspect server/index.js
 6. 搭建私有npm
 7. Joi进行输入输出验证： koa-context-validator
 8. koa-i18n
-9. https://github.com/nodejs/Release#release-schedule
+
 
 ## 文章
 
