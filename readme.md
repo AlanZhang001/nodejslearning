@@ -11,9 +11,11 @@
 
 - nodejs的版本类型分为3个：
     + Current:
+        + 开发分支，每6个月（每年4月，10月）发布一个x版本
+        + 10月份发布的大版本会支持 8个月，4月份发布的版本会变成LTS版本
     + LTS:
         + 长期支持的版本，注重安全和稳定
-        + x为偶数的版本 都会成为一个LTS的版本
+        + 凡x为偶数的版本 都会成为一个LTS的版本
         + [下载链接](https://nodejs.org/download/release/)
     + Nightly:
         + 如果有修改的时候，以天为单位发布版本，使用有风险。
@@ -67,7 +69,7 @@ nodemon --inspect server/index.js
 >When using fs, the path is relative to process.cwd() (NOT that source file).
 
 ## 待搞明白的事情
-1. nodejs 的版本问题，稳定版和LTS是什么关系？
+
 2. node 的rpc是什么东西？
 3. koa-session
 4. ioredis
