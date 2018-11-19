@@ -53,6 +53,9 @@ nodemon --inspect server/index.js
 },
 ```
 
+> --inspect-brk 和 --inspect的区别
+> 使用--inspect-brk时，打开控制台时，就会在入口文件的第一行进行断点，--inspect需要自己自行断点
+
 #### 3. __dirname, __filename, process.cwd()，./,../到底什么关系
 
 - `__dirname`:总是返回被执行的 js 所在文件夹的绝对路径
@@ -71,7 +74,7 @@ nodemon --inspect server/index.js
 
 ## 待搞明白的事情
 
-1. --inspect-brk 和 --inspect的区别
+1.
 2. node 的rpc是什么东西？
 3. koa-session
 4. ioredis
