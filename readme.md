@@ -71,6 +71,7 @@ nodemon --inspect server/index.js
 
 ## 待搞明白的事情
 
+1. --inspect-brk 和 --inspect的区别
 2. node 的rpc是什么东西？
 3. koa-session
 4. ioredis
