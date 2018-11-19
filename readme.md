@@ -1,7 +1,7 @@
 # 终于可以学习的nodejs
 
 ## 学习资源
-<https://github.com/nswbmw/N-blog>
+<https://github.com/i5ting/How-to-learn-node-correctly>
 
 ## Nodejs的版本问题
 
@@ -78,6 +78,7 @@ nodemon --inspect server/index.js
 6. 搭建私有npm
 7. Joi进行输入输出验证： koa-context-validator
 8. koa-i18n
+9. https://www.npmjs.com/package/jimp 图片压缩处理
 
 
 ## 文章
