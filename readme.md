@@ -1,7 +1,7 @@
 # 终于可以学习的nodejs
 
 ## 学习资源
-<https://github.com/i5ting/How-to-learn-node-correctly>
+
 
 ## Nodejs的版本问题
 
