@@ -72,6 +72,31 @@ nodemon --inspect server/index.js
 
 >When using fs, the path is relative to process.cwd() (NOT that source file).
 
+####  node 通过koa如何向页面直出字段
+
+针对普通业务，会对具体的页面去做render，直接通过koa-view的render中加直出字段即可
+
+```JavaScript
+await ctx.render('spread/index',{
+    title1:ctx.i18n.__('想你所想1')
+});
+```
+
+对于各个业务都需要的全部支出字段，可在启动文件中这么处理：
+```JavaScript
+app.use(async function(ctx, next) {
+    var date = new Date();
+    ctx.state = Object.assign(ctx.state, {
+        year: date.getFullYear(),
+        month: ('00' + (date.getMonth() + 1)).substr(-2),
+        date: ('00' + (date.getDate() + 1)).substr(-2),
+        version:'1.0.0'
+    });
+    await next();
+})
+```
+
+
 ## 待搞明白的事情
 
 1.
