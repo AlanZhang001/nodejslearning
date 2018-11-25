@@ -78,7 +78,7 @@ nodemon --inspect server/index.js
 
 ```JavaScript
 await ctx.render('spread/index',{
-    title1:ctx.i18n.__('想你所想1')
+    title1:'想你所想1'
 });
 ```
 
@@ -106,7 +106,7 @@ app.use(async function(ctx, next) {
 5. pm2 开机启动
 6. 搭建私有npm
 7. Joi进行输入输出验证： koa-context-validator
-8. koa-i18n
+ 
 9. https://www.npmjs.com/package/jimp 图片压缩处理
 
 
