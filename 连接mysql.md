@@ -25,6 +25,8 @@ npm install mysql --save-dev
 # 安装
 brew install mysql@5.7
 brew link mysql@5.7 --force
+# 安装完要启动，否者会报：Can't connect to local MySQL server through socket '/tmp/mysql.sock'的错误
+mysql.server start
 
 # 安装完成会有一堆提示，按照提示操作，不要遗漏
 # MySQL安全配置向导,详细配置见：https://blog.csdn.net/vsiryxm/article/details/44220551，设置root 密码
