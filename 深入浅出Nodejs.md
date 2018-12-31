@@ -93,8 +93,15 @@ Node的模块分为2类：
 
 #### 理想的非阻塞异步IO
 
+![](./asserts/ideaio.png)
+
 #### 现实的异步IO
 
+windows 上通过IOCP的方式实现异步IO:调用异步方法，等待IO完成之后的通知，执行回调，用户无需考虑轮训。但是它内部仍然是线程池原理。
+
+*nix通过自定义线程池的方式来实现异步IO。
+
+![./asserts/libuv.png](./asserts/libuv.png)
 
 ##  第十一章 产品化
 
