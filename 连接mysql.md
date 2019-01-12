@@ -61,3 +61,16 @@ desc table_name;
 # 显示创建表的sql语句
 show create table table_name;
 ```
+
+## 工具推荐
+
+#### mycli mysql的命令行提示工具
+
+<https://github.com/dbcli/mycli>
+
+```shell
+# install
+brew update && brew install mycli
+# start
+mycli -u用户名 -p密码
+```
