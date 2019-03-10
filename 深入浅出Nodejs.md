@@ -103,6 +103,23 @@ windows 上通过IOCP的方式实现异步IO:调用异步方法，等待IO完成
 
 ![./asserts/libuv.png](./asserts/libuv.png)
 
+#### Node 的异步IO
+
+#### 非IO的异步API
+
+##### setimeout的行为
+
+![](./asserts/settimeout.png)
+
+##### setTimeout(fn,0) 和 process.nextTick的区别
+
+- 一般情况下，settimeout(fn,0)能和process.nextTick达到同样所需的效果。
+- 但是，由于事件循环自身的特特点，定时器的精确度不够，而事实上，定时器需要动用红黑树创建定时器对象和迭代等操作，而settimeout(fn,0)的方式较为浪费性能。
+- process.nextTick更为轻量，每次调用process.nextTick方法，只会将回调函数放入队列中，在下一轮tick时取出执行。
+- 定时器采用红黑树的操作时间复杂度是O(lg(n)),process.nextTick的时间复杂度是O(1),后者更加高效
+
+####  setImmedinate 和process.nexttick的区别
+
 ##  第十一章 产品化
 
 ####  11.3 性能
