@@ -120,6 +120,13 @@ windows 上通过IOCP的方式实现异步IO:调用异步方法，等待IO完成
 
 ####  setImmedinate 和process.nexttick的区别
 
+- 在具体实现上， process.nextTick(的回调函数保存在一个数组中， setImmediate()的结果
+则是保存在链表中。
+- 在行为上， process.nextTick()在每轮循环中会将数组中的回调函数全部执
+行完，而 setImmediate()在每轮循环中执行链表中的一个回调函数
+- 事件轮训对观察者的检查是有先后顺序的，setTimeout采用的是类似IO观察者，setImmediate采用的是check观察者，而process.nextTick()采用的是idle观察者。
+- 在每一个轮询检查中，三种观察者的优先级顺序是：idle观察者>io观察者>check观察者
+
 ##  第十一章 产品化
 
 ####  11.3 性能
