@@ -127,6 +127,10 @@ windows 上通过IOCP的方式实现异步IO:调用异步方法，等待IO完成
 - 事件轮训对观察者的检查是有先后顺序的，setTimeout采用的是类似IO观察者，setImmediate采用的是check观察者，而process.nextTick()采用的是idle观察者。
 - 在每一个轮询检查中，三种观察者的优先级顺序是：idle观察者>io观察者>check观察者
 
+这里有更清楚的解释：
+https://juejin.im/post/5c3d8956e51d4511dc72c200
+https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/
+
 ##  第十一章 产品化
 
 ####  11.3 性能
