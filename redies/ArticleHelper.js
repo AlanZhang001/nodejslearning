@@ -65,7 +65,7 @@ export default class {
         let idList = this.redis.zrevrangeAsync([this.ArticleIDSet, offset, offset + size - 1]);
 
         var _ = [];
-        res.forEach((id) => {
+        idList.forEach((id) => {
             _.push(this.getArticleByID(id));
         });
 
@@ -74,4 +74,47 @@ export default class {
         return articleList;
     }
 
+    async getCommentsByID(id){
+
+        let commentKey = this.CommentIDPrefix + id;
+        let commentList = await this.redis.zrangeAsync(commentKey + id, [0, -1]);
+
+        if(commentList === null) {
+            commentList = await ArticleMySQLHelper.getComments(id);
+            let _ = [];
+            commentList.forEach(function (cmmt) {
+                _.push(
+                    this.redis.zaddAsync(commentKey, [cmmt.index, cmmt.body])
+                );
+            });
+            await Promise.all(_);
+        }
+
+        return commentList;
+    }
+
+    /**
+     * 用户添加评论方法
+     * @param {*} id
+     * @param {*} comment
+     */
+    async addComment(id, comment){
+        await ArticleMySQLHelper.saveComment(id, comment);
+        await this.redis.expireAsync(that.ArticleIDPrefix + id, [0]);
+    }
+
+    /**
+     * 带过期设置的读取文章方法
+     */
+    async getArticleExpire(id){
+        let articelKey = this.ArticleIDPrefix + id;
+        let article = await this.redis.hgetallAsync();
+        if(article === null) {
+            article = await ArticleMySQLHelper.getOne(id);
+            await this.redis.hmsetAsync(articelKey, article);
+            await this.redis.expireAsync(tarticelKey, 3600 * 2);
+        }
+
+        return article;
+    }
 }
