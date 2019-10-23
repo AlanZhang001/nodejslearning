@@ -72,7 +72,7 @@ nodemon --inspect server/index.js
 
 >When using fs, the path is relative to process.cwd() (NOT that source file).
 
-####  node 通过koa如何向页面直出字段
+#### 4. node 通过koa如何向页面直出字段
 
 针对普通业务，会对具体的页面去做render，直接通过koa-view的render中加直出字段即可
 
@@ -96,11 +96,13 @@ app.use(async function(ctx, next) {
 })
 ```
 
+#### N. 一些奇怪的问题
+
+1. koa的request.query 是通过`Object.create(null,{a:1,b:2})`,这种方式创建，其并没有继承值`Object.prototype`，导致request.query并不能调用一些方法，比如：`toString，hasOwnProperty`
+
 
 ## 待搞明白的事情
 
-1.
-2. node 的rpc是什么东西？
 3. koa-session
 4. ioredis
 5. pm2 开机启动
