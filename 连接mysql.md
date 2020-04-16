@@ -60,6 +60,11 @@ sudo rm -rf /usr/local/var/mysql
 desc table_name;
 # 显示创建表的sql语句
 show create table table_name;
+# 查看数据路使用容量
+# Mysql中会有一个默认的数据库：information_schema，里面有一个Tables表记录了所有表的信息
+# 以M为单位
+use information_schema;
+SELECT TABLE_SCHEMA, SUM(DATA_LENGTH)/1024/1024  FROM TABLES GROUP BY TABLE_SCHEMA;
 ```
 
 ## 工具推荐
