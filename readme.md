@@ -103,12 +103,12 @@ app.use(async function(ctx, next) {
 
 ## 待搞明白的事情
 
+1.
 3. koa-session
 4. ioredis
-5. pm2 开机启动
 6. 搭建私有npm
 7. Joi进行输入输出验证： koa-context-validator
-8. sequelize.js 和 sequelize-auto的实践 
+8. sequelize.js 和 sequelize-auto的实践
 9. https://www.npmjs.com/package/jimp 图片压缩处理
 
 
