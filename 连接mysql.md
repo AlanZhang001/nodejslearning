@@ -67,6 +67,16 @@ use information_schema;
 SELECT TABLE_SCHEMA, SUM(DATA_LENGTH)/1024/1024  FROM TABLES GROUP BY TABLE_SCHEMA;
 ```
 
+## orm框架
+
+#### sequelize教程
+- [sequelize](https://github.com/demopark/sequelize-docs-Zh-CN/blob/master/core-concepts/getting-started.md)
+
+#### 一些问题
+
+1. sequelize 6.x的版本，不再支持import方法，即 `new Sequelize()`实例不再具备import方法:https://sequelize.org/master/manual/models-definition.html
+
+
 ## 工具推荐
 
 #### mycli mysql的命令行提示工具
@@ -81,4 +91,3 @@ mycli -u用户名 -p密码
 ```
 
 ## 教程
-- [sequelize]<https://github.com/demopark/sequelize-docs-Zh-CN/blob/master/core-concepts/getting-started.md>
