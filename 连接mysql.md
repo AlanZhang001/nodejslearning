@@ -76,6 +76,8 @@ SELECT TABLE_SCHEMA, SUM(DATA_LENGTH)/1024/1024  FROM TABLES GROUP BY TABLE_SCHE
 
 1. sequelize 6.x的版本，不再支持import方法，即 `new Sequelize()`实例不再具备import方法:https://sequelize.org/master/manual/models-definition.html
 
+2. 在mysql数据中，sequelize 4及以上，除了需要安装mysql依赖之外，还需要安装mysql2
+
 
 ## 工具推荐
 
