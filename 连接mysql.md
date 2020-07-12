@@ -81,4 +81,4 @@ mycli -u用户名 -p密码
 ```
 
 ## 教程
-- <sequlize><https://github.com/demopark/sequelize-docs-Zh-CN/blob/master/core-concepts/getting-started.md>
+- [sequelize]<https://github.com/demopark/sequelize-docs-Zh-CN/blob/master/core-concepts/getting-started.md>
