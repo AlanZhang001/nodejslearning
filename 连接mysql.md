@@ -65,6 +65,12 @@ show create table table_name;
 # 以M为单位
 use information_schema;
 SELECT TABLE_SCHEMA, SUM(DATA_LENGTH)/1024/1024  FROM TABLES GROUP BY TABLE_SCHEMA;
+
+# 查看mssql的配置文件在哪里
+mysql --help | grep 'Default options' -A 1
+
+# 显示哪些线程正在运行：https://blog.csdn.net/e421083458/article/details/38342051
+show processlist
 ```
 
 ## orm框架
@@ -116,3 +122,5 @@ mycli -u用户名 -p密码
 - 在master机器上，主从同步事件会被写到特殊的log文件中(binary-log);在slave机器上，slave读取主从同步事件，并根据读取的事件变化，在slave库上做相应的更改。
 
 #### 主从同步的实现过程
+
+https://zhuanlan.zhihu.com/p/141949406
