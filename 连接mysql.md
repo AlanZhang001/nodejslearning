@@ -93,3 +93,11 @@ mycli -u用户名 -p密码
 ```
 
 ## 教程
+
+## Node.js Sequelize 实现数据库读写分离
+
+简明教程: https://itbilu.com/nodejs/npm/VydcPndib.html
+
+关键点：
+- 要在Sequelize中使用读/写复制，可以在初始化Sequelize时有时向其replication选项传递一个对象.这个对象read、write两个属性。write是一个单一的对象(即：由单台服务器处理写入)，而read是一个包含对象的数组(即：由多台服务器处理读取)
+- Sequelize 并不会设置主从复制节点及节点间的数据同步(复制)，这些操作实际由MySQL(或你所使用的数据库)完成。而 Sequelize 只负责从主从节点写入或读取数据。
