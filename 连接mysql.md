@@ -71,6 +71,9 @@ mysql --help | grep 'Default options' -A 1
 
 # 显示哪些线程正在运行：https://blog.csdn.net/e421083458/article/details/38342051
 show processlist
+
+# 查看db的使用量
+select concat(round(sum(DATA_LENGTH/1024/1024),2),'MB') as data  from TABLES where table_schema='数据库名称'
 ```
 
 ## orm框架
