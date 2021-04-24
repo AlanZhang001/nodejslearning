@@ -56,6 +56,20 @@ nodemon --inspect server/index.js
 > --inspect-brk 和 --inspect的区别
 > 使用--inspect-brk时，打开控制台时，就会在入口文件的第一行进行断点，--inspect需要自己自行断点
 
+对于没有加--inspect时，如何打开 inspect的控制台呢？以下步骤可以开启：
+
+1. 查找启动脚本的进程号：`ps -ax | grep src/index.js`,可以看到当前进程号为10005
+```sh
+nodejslearning git:(master) ✗ ps -ax | grep src/index.js
+10005 ttys001    0:01.34 node src/index.js
+11780 ttys003    0:00.00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn src/index.js
+```
+
+2. 建立进程 10005 与调试工具的连接，然后就可以打开调试工具了
+```sh
+node -e 'process._debugProcess(10005)'
+```
+
 #### 3. __dirname, __filename, process.cwd()，./,../到底什么关系
 
 - `__dirname`:总是返回被执行的 js 所在文件夹的绝对路径
