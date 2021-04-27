@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/AlanZhang001/nodejslearning#readme",
   "dependencies": {
-    "redis": "^2.8.0"
+    "redis": "^3.1.1"
   },
   "devDependencies": {
     "bluebird": "^3.5.3",
